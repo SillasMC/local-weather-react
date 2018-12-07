@@ -11,7 +11,7 @@ class Weather extends Component {
 			tempScale: 'C',
 			weather: '',
 			weatherDesc: 'image',
-			icon: ''
+			icon: 'https://www.w3schools.com/w3css/img_lights.jpg'
 		};
 
 		this.state = this.initialState;
@@ -21,13 +21,13 @@ class Weather extends Component {
 		const { name, country, temp, tempScale, weather, weatherDesc, icon } = this.state;
 
 		return (
-			<div>
+			<div className="weather-row">
 				<p>{name}, {country}</p>
 				<div>
 					<p>{temp} º{tempScale}</p>
 				</div>
 				<p>{weather}</p>
-				<img src={icon} alt={weatherDesc}/>
+				<img src={icon} alt={weatherDesc} className="img-responsive img-weather-center" />
 			</div>
 		);
 	}

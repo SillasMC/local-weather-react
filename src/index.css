@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
+
+body {
+	background-color: #093015;
+}
+.main-div {
+	font-family: "Noto Serif", serif;
+	color: #bebebe;
+}
+.temp-row {
+	margin-top: 20px;
+	padding: 50px;
+	font-size: 4em;
+	text-align: center;
+}
+.pl10{
+	padding-left: 10px;
+}
+.weather-row {
+	margin-top: 20px;
+	font-size: 1.75em;
+	text-align: center;
+}
+.img-weather-center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+}
