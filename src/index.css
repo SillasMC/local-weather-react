@@ -31,3 +31,9 @@ body {
 	vertical-align: middle;
 	border: 0;
 }
+.code-author {
+	margin-top: 50px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 0.85em;
+	text-align: center;
+}

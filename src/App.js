@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Weather from './Weather';
+import Author from './Author';
 
 class App extends Component {
 	constructor(props) {
@@ -49,7 +50,7 @@ class App extends Component {
 				{/* TODO: Navbar on Future*/}
 				<p className="temp-row">Local Weather App  <i className="pl10 fa fa-cloud"></i></p>
 				<Weather weatherData={this.state} />
-				{/* TODO: Author Footer*/}
+				<Author />
 			</div>
 		);
 	}
