@@ -20,22 +20,27 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		const url = 'https://fcc-weather-api.glitch.me/api/current?lat=-3.7650466999999996&lon=-38.5577689';
+		const baseUrl = 'https://fcc-weather-api.glitch.me/api/current';
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition((pos) => {
+				let url = `${baseUrl}?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}`;
 
-		axios.get(url)
-			.then(({data}) => {
-				var standardData = {
-					name: data.name,
-					country: data.sys.country,
-					temp: data.main.temp,
-					tempScale: 'C',
-					weather: data.weather[0].main,
-					weatherDesc: data.weather[0].description,
-					icon: data.weather[0].icon
-				};
-				this.setState(standardData);
-			})
-			.catch(error => console.error(error));
+				axios.get(url)
+					.then(({data}) => {
+						let standardData = {
+							name: data.name,
+							country: data.sys.country,
+							temp: data.main.temp,
+							tempScale: 'C',
+							weather: data.weather[0].main,
+							weatherDesc: data.weather[0].description,
+							icon: data.weather[0].icon
+						};
+						this.setState(standardData);
+					})
+					.catch(error => console.error(error));
+			});
+		}
 	}
 
 	render() {
