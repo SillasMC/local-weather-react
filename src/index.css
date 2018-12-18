@@ -18,9 +18,12 @@ body {
 	padding-left: 10px;
 }
 .weather-row {
-	margin-top: 20px;
+	display: grid;
 	font-size: 1.75em;
 	text-align: center;
+}
+.weather-row>span{
+	margin-top: 12px;
 }
 .img-weather-center {
 	display: block;

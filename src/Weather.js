@@ -5,11 +5,9 @@ const Weather = (props) => {
 
 	return (
 		<div className="weather-row">
-			<p>{name}, {country}</p>
-			<div>
-				<p>{temp} º{tempScale}</p>
-			</div>
-			<p>{weather}</p>
+			<span>{name}, {country}</span>
+			<span>{temp} º{tempScale}</span>
+			<span>{weather}</span>
 			<img src={icon} alt={weatherDesc} className="img-responsive img-weather-center" />
 		</div>
 	);
