@@ -48,7 +48,10 @@ class App extends Component {
 		return (
 			<div className="main-div">
 				{/* TODO: Navbar on Future*/}
-				<p className="temp-row">Local Weather App  <i className="pl10 fa fa-cloud"></i></p>
+				<div className="app-row">
+					<span className="app-cell">Local Weather App</span>
+					<i className="pl10 app-cell fa fa-cloud"></i>
+				</div>
 				<Weather weatherData={this.state} />
 				<Author />
 			</div>
