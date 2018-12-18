@@ -4,7 +4,7 @@
 body {
 	background-color: #093015;
 }
-.main-div {
+#root {
 	font-family: "Noto Serif", serif;
 	color: #bebebe;
 }

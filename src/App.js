@@ -46,7 +46,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="main-div">
+			<React.Fragment>
 				{/* TODO: Navbar on Future*/}
 				<div className="app-row">
 					<span className="app-cell">Local Weather App</span>
@@ -54,7 +54,7 @@ class App extends Component {
 				</div>
 				<Weather weatherData={this.state} />
 				<Author />
-			</div>
+			</React.Fragment>
 		);
 	}
 }
