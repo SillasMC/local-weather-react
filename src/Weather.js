@@ -6,7 +6,7 @@ const Weather = (props) => {
 	return (
 		<div className="weather-row">
 			<span>{name}, {country}</span>
-			<span>{temp} º{tempScale}</span>
+			<span>{temp} º<span onClick={props.changeUnit} className="weather-scale">{tempScale}</span></span>
 			<span>{weather}</span>
 			<img src={icon} alt={weatherDesc} className="img-responsive img-weather-center" />
 		</div>

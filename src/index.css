@@ -28,6 +28,13 @@ body {
 .weather-row>span{
 	margin-top: 12px;
 }
+.weather-scale {
+	cursor: pointer;
+}
+.weather-scale:hover {
+	text-decoration: underline;
+	color: blue;
+}
 .img-weather-center {
 	display: block;
 	margin-left: auto;
