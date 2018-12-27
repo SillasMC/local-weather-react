@@ -21,6 +21,12 @@ class App extends Component {
 	}
 
 	componentDidMount() {
+		let timeInterval = 900000;
+		this.fetchWeather();
+		setInterval(this.fetchWeather, timeInterval);
+	}
+
+	fetchWeather = () => {
 		const baseUrl = 'https://fcc-weather-api.glitch.me/api/current';
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition((pos) => {
@@ -41,6 +47,8 @@ class App extends Component {
 					})
 					.catch(error => console.error(error));
 			});
+		} else {
+			alert("Geolocation is not supported by this browser.");
 		}
 	}
 
