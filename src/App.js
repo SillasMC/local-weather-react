@@ -52,21 +52,21 @@ class App extends Component {
 		}
 	}
 
-	render() {
-		const changeUnit = () => {
-			let val;
-			let tempData = this.state;
-			if (tempData.tempScale === 'C') {
-				tempData.tempScale = 'F';
-				val = (tempData.temp * 9/5) + 32;
-			} else {
-				tempData.tempScale = 'C';
-				val = (tempData.temp - 32) * 5/9;
-			}
-			tempData.temp = Number(Math.round(val+'e1')+'e-1');
-			this.setState(tempData);
-		};
+	changeUnit = () => {
+		let val;
+		let tempData = this.state;
+		if (tempData.tempScale === 'C') {
+			tempData.tempScale = 'F';
+			val = (tempData.temp * 9/5) + 32;
+		} else {
+			tempData.tempScale = 'C';
+			val = (tempData.temp - 32) * 5/9;
+		}
+		tempData.temp = Number(Math.round(val+'e1')+'e-1');
+		this.setState(tempData);
+	}
 
+	render() {
 		return (
 			<React.Fragment>
 				{/* TODO: Navbar on Future*/}
@@ -74,7 +74,7 @@ class App extends Component {
 					<span className="app-cell">Local Weather App</span>
 					<i className="pl10 app-cell fa fa-cloud"></i>
 				</div>
-				<Weather weatherData={this.state} changeUnit={changeUnit} />
+				<Weather weatherData={this.state} changeUnit={this.changeUnit} />
 				<Author />
 			</React.Fragment>
 		);
