@@ -23,7 +23,11 @@ class App extends Component {
 	componentDidMount() {
 		let timeInterval = 900000;
 		this.fetchWeather();
-		setInterval(this.fetchWeather, timeInterval);
+		this.fetchInterval = setInterval(this.fetchWeather, timeInterval);
+	}
+
+	componentWillUnmount () {
+		clearInterval(this.fetchInterval);
 	}
 
 	fetchWeather = () => {
