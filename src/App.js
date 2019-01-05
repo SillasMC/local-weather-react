@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Weather from './Weather';
 import Author from './Author';
+import Navbar from './Navbar';
 
 class App extends Component {
 	constructor(props) {
@@ -73,7 +74,7 @@ class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				{/* TODO: Navbar on Future*/}
+				<Navbar refreshData={this.fetchWeather} />
 				<div className="app-row">
 					<span className="app-cell">Local Weather App</span>
 					<i className="pl10 app-cell fa fa-cloud"></i>

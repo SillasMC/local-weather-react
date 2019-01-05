@@ -9,7 +9,7 @@ body {
 	color: #bebebe;
 }
 .app-row {
-	margin-top: 20px;
+	margin-top: 70px;
 	font-size: 4em;
 	text-align: center;
 }
@@ -49,4 +49,34 @@ body {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 0.85em;
 	text-align: center;
+}
+.navbar {
+	position: fixed;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #222;
+	border: 1px solid transparent;
+	border-color: #080808;
+	border-width: 0 0 1px;
+}
+.left-side {
+	color: #9d9d9d;
+	vertical-align: middle;
+	float: left;
+	margin-left: 85px;
+}
+.right-side {
+	cursor: pointer;
+	vertical-align: middle;
+	float: right;
+	margin-right: 85px;
+	padding: 0 15px;
+	background-color: #080808;
+}
+.right-side:active {
+	background-color: #5d5d5d;
 }
